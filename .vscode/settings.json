@@ -1,0 +1,12 @@
+{
+  "[plaintext]": {
+    "editor.formatOnSave": false
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "eslint.useFlatConfig": false,
+  "eslint.format.enable": true,
+  "css.customData": [".vscode/tailwind.json"]
+}
