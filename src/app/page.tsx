@@ -2,7 +2,8 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  description: "",
+  description:
+    "I'm Daniel De Guzman, a full stack web developer from Chattanooga, TN. Let's work together.",
   title: "Daniel De Guzman | Full Stack Web Developer",
 };
 
