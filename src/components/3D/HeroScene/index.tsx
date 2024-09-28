@@ -6,7 +6,10 @@ import { isMobile } from "react-device-detect";
 import * as THREE from "three";
 import { Vector3 } from "three/webgpu";
 
-import { Daniel } from "../Daniel";
+// import { Daniel } from "../Daniel";
+// import { DanielFractured } from "../DanielFractured";
+// import { DanielWhole } from "../DanielWhole";
+import { DanielWholeTransformed } from "../DanielWholeTransformed";
 
 const Rig = () => {
   const { camera, pointer } = useThree();
@@ -34,8 +37,8 @@ const Rig = () => {
   }, []);
 
   return useFrame(() => {
-    let x = -pointer.x * 5;
-    let y = -pointer.y * 5;
+    let x = -pointer.x * 2.5;
+    let y = -pointer.y * 2.5;
 
     if (isMobile) {
       x = alpha;
@@ -75,9 +78,9 @@ const HeroScene = () => {
         penumbra={1}
         position={[-10, 10, 10]}
       />
-      <pointLight decay={0} intensity={Math.PI} position={[-10, -10, -10]} />
+      <pointLight decay={0} intensity={Math.PI} position={[0, 0, 10]} />
       <Suspense>
-        <Daniel />
+        <DanielWholeTransformed />
       </Suspense>
       <Preload all />
       <Rig />

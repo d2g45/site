@@ -5,6 +5,6 @@ git pull
 
 nvm use
 
-yarn install --frozen-lockfile
+npm install
 
-yarn build
+npm run build

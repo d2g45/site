@@ -11,10 +11,17 @@ const firaCode = Fira_Code({
   variable: "--font-fira-code",
 });
 
+const title = "Daniel De Guzman | Full Stack Web Developer";
+const description =
+  "I'm Daniel De Guzman, a full stack web developer from Chattanooga, TN. Let's work together.";
+
 export const metadata: Metadata = {
-  description:
-    "I'm Daniel De Guzman, a full stack web developer from Chattanooga, TN. Let's work together.",
-  title: "Daniel De Guzman | Full Stack Web Developer",
+  description,
+  openGraph: {
+    description,
+    title,
+  },
+  title,
 };
 
 export default function RootLayout({

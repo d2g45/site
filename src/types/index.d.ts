@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import { GLTF } from "three-stdlib";
 
 export type TExternalLink = {
   as: string;
@@ -8,11 +7,4 @@ export type TExternalLink = {
   title: string;
 };
 
-export type DanielGLTF = {
-  materials: {
-    "Outer.009": THREE.MeshBasicMaterial;
-  };
-  nodes: {
-    Daniel_Whole: THREE.SkinnedMesh;
-  };
-} & GLTF;
+export type GLTFAction = Record<string, THREE.AnimationAction>;
