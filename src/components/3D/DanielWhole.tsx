@@ -29,6 +29,7 @@ export function DanielWhole(props: JSX.IntrinsicElements["group"]) {
         castShadow
         geometry={nodes.Daniel_Whole.geometry}
         material={materials["Outer.009"]}
+        material-wireframe={true}
         receiveShadow
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.1}

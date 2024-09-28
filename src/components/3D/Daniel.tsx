@@ -21,7 +21,6 @@ export type DanielGLTF = {
 
 export function Daniel(props: Props) {
   const { materials, nodes } = useGLTF(PATH) as DanielGLTF;
-  console.log(nodes);
   return (
     <group {...props} dispose={null}>
       <mesh
