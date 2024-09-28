@@ -23,24 +23,6 @@
       "max": [0.999847412109375, 0.999908447265625, 0.99981689453125],
       "min": [-0.9996337890625, -0.99993896484375, -0.99908447265625],
       "type": "VEC3"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 10476,
-      "max": [1.0, 0.999855637550354, 0.9999116659164429, 1.0],
-      "min": [
-        -0.9999633431434631, -0.9999831914901733, -0.9998224973678589, -1.0
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 4,
-      "componentType": 5126,
-      "count": 10476,
-      "max": [1.4642014503479004, 1.0],
-      "min": [0.0, 0.0],
-      "type": "VEC2"
     }
   ],
   "asset": {
@@ -64,18 +46,6 @@
       "buffer": 0,
       "byteLength": 125712,
       "byteOffset": 147108,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 167616,
-      "byteOffset": 272820,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 83808,
-      "byteOffset": 440436,
       "target": 34962
     }
   ],
@@ -103,9 +73,7 @@
         {
           "attributes": {
             "NORMAL": 2,
-            "POSITION": 1,
-            "TANGENT": 3,
-            "TEXCOORD_0": 4
+            "POSITION": 1
           },
           "indices": 0,
           "material": 0
