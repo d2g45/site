@@ -2,11 +2,16 @@
   "[plaintext]": {
     "editor.formatOnSave": false
   },
+  "css.customData": [".vscode/tailwind.json"],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
   },
   "eslint.useFlatConfig": false,
   "eslint.format.enable": true,
-  "css.customData": [".vscode/tailwind.json"]
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Fira_Code } from "next/font/google";
 
-import "@/styles/globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import cx from "classnames";
-import { Fira_Code } from "next/font/google";
+
+import "@/styles/globals.css";
 
 const firaCode = Fira_Code({
   display: "swap",
@@ -32,7 +33,9 @@ export default function RootLayout({
   const className = cx(firaCode.variable);
   return (
     <html lang="en">
-      <body className={`${className} antialiased`}>
+      <body
+        className={`${className} bg-zinc-300 font-mono text-zinc-800 antialiased dark:bg-zinc-800 dark:text-zinc-300`}
+      >
         {children}
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />

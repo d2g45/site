@@ -1,4 +1,4 @@
-import { TExternalLink } from "@/types";
+import { TExternalLink } from "@/types/global";
 
 export const EMAIL: string = "me@danieldeguzman.com";
 

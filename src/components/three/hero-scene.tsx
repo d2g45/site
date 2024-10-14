@@ -1,14 +1,16 @@
 "use client";
+
+import { Suspense, useEffect, useState } from "react";
+
 import { Preload } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import * as THREE from "three";
 
-// import { Daniel } from "../Daniel";
-// import { DanielFractured } from "../DanielFractured";
-import { DanielWhole } from "../DanielWhole";
-// import { DanielWholeTransformed } from "../DanielWholeTransformed";
+// import { Daniel } from "./daniel";
+// import { DanielFractured as Daniel } from "./daniel-fractured";
+// import { DanielWholeTransformed as Daniel } from "./daniel-whole-transformed";
+import { DanielWhole as Daniel } from "./daniel-whole";
 
 const Rig = () => {
   const { camera, pointer } = useThree();
@@ -57,7 +59,7 @@ const HeroScene = () => {
   }, []);
 
   return (
-    <div className="absolute left-0 top-0 size-full bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 p-4 md:h-screen xl:p-0">
+    <div className="absolute left-0 top-0 size-full p-4 md:h-screen xl:p-0">
       <Canvas
         camera={{ position: new THREE.Vector3(0, 0, 6) }}
         dpr={[1, 1]}
@@ -69,12 +71,24 @@ const HeroScene = () => {
         }}
       >
         <ambientLight intensity={Math.PI / 2} />
-        <spotLight angle={0.15} decay={0} intensity={Math.PI} penumbra={1} position={[10, 10, 10]} />
+        <spotLight
+          angle={0.15}
+          decay={0}
+          intensity={Math.PI}
+          penumbra={1}
+          position={[10, 10, 10]}
+        />
 
-        <spotLight angle={0.15} decay={0} intensity={Math.PI} penumbra={1} position={[-10, 10, 10]} />
+        <spotLight
+          angle={0.15}
+          decay={0}
+          intensity={Math.PI}
+          penumbra={1}
+          position={[-10, 10, 10]}
+        />
         <pointLight decay={0} intensity={Math.PI} position={[0, 0, 10]} />
         <Suspense>
-          <DanielWhole />
+          <Daniel />
           <Rig />
         </Suspense>
         <Preload all />

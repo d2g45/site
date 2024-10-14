@@ -19,7 +19,6 @@ const config: Config = {
         mono: ["var(--font-fira-code)"],
       },
 
-      /* eslint-disable perfectionist/sort-objects */
       screens: {
         sm: "375px",
         md: "768px",
@@ -35,7 +34,6 @@ const config: Config = {
         gargantuan: "3840px",
         print: { raw: "print" },
       },
-      /* eslint-enable perfectionist/sort-objects */
     },
   },
 };
