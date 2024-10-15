@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.5.2 public/three/daniel-whole.gltf -t -m --shadows -d -T 
 Files: public/three/daniel-whole.gltf [2.76KB] > /var/www/html/daniel-whole-transformed.glb [20.38KB] (-638%)
 */
 import { useGLTF } from "@react-three/drei";
-import * as THREE from "three";
+import { Mesh, MeshStandardMaterial } from "three";
 import { GLTF } from "three-stdlib";
 
 import { GLTFAction } from "@/types/global";
@@ -12,10 +12,10 @@ import { GLTFAction } from "@/types/global";
 type GLTFResult = {
   animations: GLTFAction[];
   materials: {
-    ["Outer.009"]: THREE.MeshStandardMaterial;
+    ["Outer.009"]: MeshStandardMaterial;
   };
   nodes: {
-    Daniel_Whole: THREE.Mesh;
+    Daniel_Whole: Mesh;
   };
 } & GLTF;
 

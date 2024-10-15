@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import { AnimationAction } from "three";
 
 export type TExternalLink = {
   as: string;
@@ -7,4 +7,4 @@ export type TExternalLink = {
   title: string;
 };
 
-export type GLTFAction = Record<string, THREE.AnimationAction>;
+export type GLTFAction = Record<string, AnimationAction>;
