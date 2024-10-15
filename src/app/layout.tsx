@@ -4,6 +4,7 @@ import { Fira_Code } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import cx from "classnames";
 
+import { META, URL } from "@/constants/global";
 import "@/styles/globals.css";
 
 const firaCode = Fira_Code({
@@ -12,17 +13,35 @@ const firaCode = Fira_Code({
   variable: "--font-fira-code",
 });
 
-const title = "Daniel De Guzman | Full Stack Web Developer";
-const description =
-  "I'm Daniel De Guzman, a full stack web developer from Chattanooga, TN. Let's work together.";
+const { title, description, openGraphImage, shortname } = META;
 
 export const metadata: Metadata = {
   description,
   openGraph: {
+    ...openGraphImage,
     description,
     title,
+    type: "website",
+    url: URL,
   },
   title,
+  authors: [
+    {
+      name: shortname,
+      url: URL,
+    },
+  ],
+  keywords: [
+    shortname,
+    "full stack web developer",
+    "chattanooga web developer",
+    "web developer",
+    "software engineer",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
