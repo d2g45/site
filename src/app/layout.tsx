@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 
-import { GoogleAnalytics } from "@next/third-parties/google";
-import cx from "classnames";
-
+import Analytics from "@/components/dom/analytics";
 import { META, URL } from "@/constants/global";
 import "@/styles/globals.css";
 
@@ -49,16 +47,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const className = cx(firaCode.variable);
   return (
     <html lang="en">
       <body
-        className={`${className} bg-zinc-300 font-mono text-zinc-800 antialiased dark:bg-zinc-800 dark:text-zinc-300`}
+        className={`${firaCode.variable} bg-zinc-300 font-mono text-zinc-800 antialiased dark:bg-zinc-800 dark:text-zinc-300`}
       >
         {children}
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
-        )}
+        <Analytics />
       </body>
     </html>
   );
