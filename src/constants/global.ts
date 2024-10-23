@@ -1,5 +1,3 @@
-import { TExternalLink } from "@/types/global";
-
 export const EMAIL: string = "me@danieldeguzman.com";
 export const URL: string = "https://danieldeguzman.com";
 
@@ -9,7 +7,7 @@ export const META = {
     images: [
       {
         url: `${URL}/sharing-02.jpg`,
-        secureUrl: `${URL}/sharing.jpg`,
+        secureUrl: `${URL}/sharing-02.jpg`,
         alt: "Daniel De Guzman's website",
         type: "image/jpg",
         width: 1200,
@@ -21,24 +19,3 @@ export const META = {
   description:
     "I'm Daniel De Guzman, a full stack web developer from Chattanooga, TN. Let's work together.",
 };
-
-export const LINKS: TExternalLink[] = [
-  {
-    as: "email",
-    href: `mailto:${EMAIL}`,
-    slug: "email",
-    title: "Send me an email",
-  },
-  {
-    as: "github",
-    href: "https://github.com/d2g45",
-    slug: "github",
-    title: "GitHub",
-  },
-  {
-    as: "linkedin",
-    href: "https://www.linkedin.com/in/danieldeguzman/",
-    slug: "linkedin",
-    title: "LinkedIn",
-  },
-];
