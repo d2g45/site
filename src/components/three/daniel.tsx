@@ -27,7 +27,7 @@ export function Daniel(props: Props) {
         material={materials["Outer.009"]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.1}
-      ></mesh>
+      />
     </group>
   );
 }
